@@ -73,7 +73,7 @@ const Index = () => {
                   <div className="text-sm text-white/80">клиентов</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-accent">98%</div>
+                  <div className="text-4xl font-bold text-accent">101%</div>
                   <div className="text-sm text-white/80">успеха</div>
                 </div>
               </div>
