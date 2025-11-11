@@ -66,7 +66,7 @@ const Index = () => {
               <div className="grid grid-cols-3 gap-6 mt-12">
                 <div>
                   <div className="text-4xl font-bold text-accent">15+</div>
-                  <div className="text-sm text-white/80">лет опыта</div>
+                  <div className="text-sm text-white/80">лет личного опыта</div>
                 </div>
                 <div>
                   <div className="text-4xl font-bold text-accent">150000+</div>
