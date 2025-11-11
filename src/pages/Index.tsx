@@ -103,32 +103,38 @@ const Index = () => {
               {
                 icon: 'Banknote',
                 title: 'Списание долгов',
-                description: 'Обнулим все долги. Легально и навсегда'
+                description: 'Обнулим все долги. Легально и навсегда',
+                link: null
               },
               {
                 icon: 'ShieldCheck',
                 title: 'Защита от коллекторов',
-                description: 'Всех коллекторов берём на себя. ВСЕ ЗВОНКИ НА НАС. Интересные звонки выкладываем в YouTube'
+                description: 'Всех коллекторов берём на себя. ВСЕ ЗВОНКИ НА НАС. Интересные звонки выкладываем в YouTube',
+                link: 'https://youtube.com/@dolgspisan'
               },
               {
                 icon: 'FileText',
                 title: 'Реструктуризация долгов',
-                description: 'Пересмотр условий кредитных договоров и снижение финансовой нагрузки'
+                description: 'Пересмотр условий кредитных договоров и снижение финансовой нагрузки',
+                link: null
               },
               {
                 icon: 'Gavel',
                 title: 'Судебное представительство',
-                description: 'Защита интересов в судебных разбирательствах по долговым обязательствам'
+                description: 'Защита интересов в судебных разбирательствах по долговым обязательствам',
+                link: null
               },
               {
                 icon: 'Users',
                 title: 'Консультации юристов',
-                description: 'Профессиональные консультации по всем вопросам долговых обязательств'
+                description: 'Профессиональные консультации по всем вопросам долговых обязательств',
+                link: null
               },
               {
                 icon: 'ClipboardCheck',
                 title: 'Сопровождение банкротства',
-                description: 'Полное юридическое сопровождение процедуры банкротства от начала до конца'
+                description: 'Полное юридическое сопровождение процедуры банкротства от начала до конца',
+                link: null
               }
             ].map((service, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
@@ -140,6 +146,17 @@ const Index = () => {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-base">{service.description}</CardDescription>
+                  {service.link && (
+                    <a 
+                      href={service.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 mt-4 text-accent hover:text-accent/80 font-medium transition-colors"
+                    >
+                      <Icon name="Youtube" size={20} />
+                      Смотреть записи звонков
+                    </a>
+                  )}
                 </CardContent>
               </Card>
             ))}
