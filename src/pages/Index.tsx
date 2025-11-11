@@ -200,7 +200,64 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="отзывы" className="py-20 bg-secondary">
+      <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-4">Наша команда</Badge>
+            <h2 className="text-4xl font-heading font-bold mb-4">Консультации юристов</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Профессионалы с многолетним опытом готовы помочь решить вашу проблему
+            </p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              {
+                name: 'Ралиф',
+                role: 'Руководитель',
+                photo: 'https://cdn.poehali.dev/files/c55080b1-6820-4716-950f-59aa72b65784.jpg',
+                description: 'Основатель компании. Более 15 лет в юридической практике. Специализация: банкротство физических лиц, сложные долговые дела.'
+              },
+              {
+                name: 'Елена',
+                role: 'Старший юрист',
+                photo: 'https://cdn.poehali.dev/files/0cfe36fc-52b5-4174-a813-41ca65d86d14.jpg',
+                description: 'Эксперт по защите от коллекторов. 10+ лет опыта. Выиграла более 500 дел по незаконным действиям коллекторских агентств.'
+              },
+              {
+                name: 'Айгуль',
+                role: 'Юрист-консультант',
+                photo: 'https://cdn.poehali.dev/files/df58be02-318b-423d-82af-0cde0a8fe5f9.jpg',
+                description: 'Специалист по реструктуризации долгов. Помогла снизить долговую нагрузку более чем 300 клиентам.'
+              },
+              {
+                name: 'Команда',
+                role: 'Юристы компании',
+                photo: 'https://cdn.poehali.dev/files/14a9241c-1a4d-4006-95af-c47a5715de0f.jpg',
+                description: 'Профессиональная команда из 6+ специалистов. Работаем слаженно для достижения лучшего результата для клиента.'
+              }
+            ].map((lawyer, index) => (
+              <Card key={index} className="hover:shadow-xl transition-shadow">
+                <CardContent className="p-0">
+                  <div className="aspect-[3/4] overflow-hidden rounded-t-lg">
+                    <img 
+                      src={lawyer.photo} 
+                      alt={lawyer.name}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-2xl font-heading font-bold mb-1">{lawyer.name}</h3>
+                    <p className="text-accent font-medium mb-4">{lawyer.role}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{lawyer.description}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="отзывы" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4">Отзывы</Badge>
